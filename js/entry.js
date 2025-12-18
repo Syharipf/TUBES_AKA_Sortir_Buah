@@ -67,6 +67,7 @@ resetBtn.addEventListener("click", () => {
 });
 
 // =========================
-// INIT
+//INIT
 // =========================
 render();
+
