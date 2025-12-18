@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analisis Algoritma</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<main class="app">
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <h1>📊 Analisis Efisiensi Algoritma</h1>
+    <p class="subtitle">
+      Perbandingan Merge Sort Iteratif dan Rekursif
+    </p>
+  </header>
+
+  <!-- GRID ANALISIS -->
+  <section class="analysis-grid">
+
+    <!-- GRAFIK (SEMBUNYI DEFAULT) -->
+    <section class="card" id="chartContainer" style="display:none;">
+      <h2>Grafik Waktu Eksekusi</h2>
+      <canvas id="runtimeChart" height="220"></canvas>
+    </section>
+
+    <!-- HASIL NUMERIK -->
+    <section class="card">
+      <h2>Hasil Runtime</h2>
+      <p id="runtimeInfo">
+        Silakan input data buah terlebih dahulu di halaman Entry.
+      </p>
+    </section>
+
+  </section>
+
+  <!-- KETERANGAN -->
+  <section class="card" style="margin-top:24px;">
+    <h2>Keterangan Analisis</h2>
+    <p>
+      Pengujian dilakukan dengan mengurutkan data buah berdasarkan total harga
+      menggunakan algoritma Merge Sort versi iteratif dan rekursif.
+    </p>
+    <p>
+      Pengukuran waktu eksekusi dilakukan secara langsung menggunakan
+      <code>performance.now()</code> terhadap data input pengguna.
+    </p>
+  </section>
+
+  <footer class="app-footer">
+    Halaman Analisis · Sortir Buah
+  </footer>
+
+</main>
+
+<!-- NAVIGASI -->
+<div class="page-nav">
+  <a href="display.html" class="nav-btn left">⬅ Display</a>
+  <a href="entry.html" class="nav-btn right">Entry ➡</a>
+</div>
+
+<!-- SCRIPT -->
+<script src="../js/data.js"></script>
+<script src="../js/utils.js"></script>
+<script src="../js/algoritma.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/analysis.js"></script>
+
+</body>
+</html>
