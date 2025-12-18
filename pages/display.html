@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Display Rak Buah</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<main class="app">
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <h1>📦 Penempatan Buah ke Rak</h1>
+    <p class="subtitle">
+      Hasil Pengurutan Menggunakan Algoritma Merge Sort
+    </p>
+  </header>
+
+  <!-- GRID -->
+  <section class="main-grid">
+
+    <!-- HASIL SORTING -->
+    <section class="card">
+      <h2>Hasil Sorting (Urut Harga)</h2>
+
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Buah</th>
+            <th>Berat (kg)</th>
+            <th>Total Harga</th>
+          </tr>
+        </thead>
+        <tbody id="hasilSorting">
+          <tr>
+            <td colspan="4" style="text-align:center;color:#777;">
+              Tidak ada data
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- RAK -->
+    <section class="card">
+    <h2>Rak Buah (Berdasarkan Harga)</h2>
+        <div class="rak-grid">
+
+        <div class="rak-card murah">
+        <h3>🟢 Rak Murah</h3>
+        <ul id="rakMurah" class="rak-list"></ul>
+        </div>
+
+        <div class="rak-card sedang">
+            <h3>🟡 Rak Sedang</h3>
+            <ul id="rakSedang" class="rak-list"></ul>
+        </div>
+
+        <div class="rak-card mahal">
+            <h3>🔴 Rak Mahal</h3>
+            <ul id="rakMahal" class="rak-list"></ul>
+        </div>
+        </div>
+
+    </section>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="app-footer">
+    Halaman Display · Sortir Buah
+  </footer>
+
+</main>
+
+<!-- NAVIGASI HALAMAN -->
+<div class="page-nav">
+  <a href="entry.html" class="nav-btn left">⬅ Entry</a>
+  <a href="analysis.html" class="nav-btn right">Analysis ➡</a>
+</div>
+
+<script src="../js/data.js"></script>
+<script src="../js/algoritma.js"></script>
+<script src="../js/display.js"></script>
+
+</body>
+</html>
