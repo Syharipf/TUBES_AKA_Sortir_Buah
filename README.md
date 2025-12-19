@@ -119,7 +119,7 @@ Tujuannya adalah membandingkan efisiensi waktu eksekusi (runtime) pada berbagai 
 
 ### Opsi 1: Online
 Buka aplikasi melalui GitHub Pages:  
-https://syharipf.github.io/TUBES_AKA_Sortir_Buah/index.html
+https://syharipf.github.io/Analisis-Sortir-Buah/index.html
 
 ### Opsi 2: Lokal
 1. Clone atau unduh repository
