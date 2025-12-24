@@ -59,7 +59,7 @@ function renderTabel(data) {
   if (data.length === 0) {
     hasilSortingEl.innerHTML = `
       <tr>
-        <td colspan="4" style="text-align:center;color:#777;">
+        <td colspan="5" style="text-align:center;color:#777;">
           Tidak ada data
         </td>
       </tr>`;
@@ -67,12 +67,16 @@ function renderTabel(data) {
   }
 
   data.forEach((item, i) => {
+    const hargaKg = hargaBuah[item.buah];
+    const total = totalHarga(item);
+
     hasilSortingEl.innerHTML += `
       <tr>
         <td>${i + 1}</td>
         <td>${capitalize(item.buah)}</td>
         <td>${item.berat.toFixed(2)}</td>
-        <td>${formatRupiah(totalHarga(item))}</td>
+        <td>${formatRupiah(hargaKg)}</td>
+        <td>${formatRupiah(total)}</td>
       </tr>`;
   });
 }
@@ -96,7 +100,7 @@ function renderRak(data) {
 
     if (hargaKg <= 20000) {
       rakMurahEl.innerHTML += li;
-    } else if (hargaKg <= 50000) {
+    } else if (hargaKg <= 35000) {
       rakSedangEl.innerHTML += li;
     } else {
       rakMahalEl.innerHTML += li;
