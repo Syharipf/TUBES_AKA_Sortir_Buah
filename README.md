@@ -67,11 +67,12 @@ Tujuannya adalah membandingkan efisiensi waktu eksekusi (runtime) pada berbagai 
     │   ├── app.js
     │   ├── data.js
     │   ├── display.js
-    │   ├── entry.js
+    │   ├── input.js
     │   └── utils.js
     ├── pages/
     │   ├── analysis.html
-    │   └── display.html
+    │   ├── display.html
+    │   └── input.html
     ├── README.md
     └── index.html
 
@@ -79,7 +80,7 @@ Tujuannya adalah membandingkan efisiensi waktu eksekusi (runtime) pada berbagai 
 
 ## 🧭 Alur Aplikasi
 
-### 1. Entry Data
+### 1. Input Data
 - Pengguna memasukkan jenis buah dan berat
 - Data disimpan ke LocalStorage
 
