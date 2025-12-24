@@ -22,7 +22,7 @@ function render() {
   if (dataBuah.length === 0) {
     listEl.innerHTML = `
       <tr>
-        <td colspan="3" style="text-align:center;color:#777;">
+        <td colspan="4" style="text-align:center;color:#777;">
           Belum ada data
         </td>
       </tr>
@@ -36,11 +36,15 @@ function render() {
         <td>${i + 1}</td>
         <td>${item.buah}</td>
         <td>${item.berat.toFixed(2)}</td>
+        <td>
+          <button class="btn danger" onclick="hapusData(${i})">
+            Hapus
+          </button>
+        </td>
       </tr>
     `;
   });
 
-  // SIMPAN SETIAP PERUBAHAN
   localStorage.setItem("dataBuah", JSON.stringify(dataBuah));
 }
 
@@ -57,17 +61,27 @@ tambahBtn.addEventListener("click", () => {
 
   buahEl.value = "";
   beratEl.value = "";
+
   render();
 });
 
 resetBtn.addEventListener("click", () => {
+  if (!confirm("Yakin ingin menghapus semua data?")) return;
+
   dataBuah = [];
   localStorage.removeItem("dataBuah");
   render();
 });
 
 // =========================
-//INIT
+// HAPUS PER BARIS
+// =========================
+function hapusData(index) {
+  dataBuah.splice(index, 1);
+  render();
+}
+
+// =========================
+// INIT
 // =========================
 render();
-
